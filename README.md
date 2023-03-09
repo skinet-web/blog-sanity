@@ -1,4 +1,4 @@
-NEXT.JS with Tailwind and CMS
+NEXT.JS 13 with experimental app directory Tailwind and CMS
 
 More like an experimental project.
 
