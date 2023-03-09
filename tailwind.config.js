@@ -1,8 +1,34 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
+  mode: "jit",
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primarycolor: "#edf2f8",
+        secondarycolor: "#313bac",
+        blackcolor: "#030303",
+        lightGraycolor: "#e4e4e4",
+        graycolor: "#6b7688",
+        browncolor: "#46364a",
+        whitecolor: "#ffffff",
+      },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+      },
+    },
+    screens: {
+      xs: "480px",
+      ss: "620px",
+      sm: "768px",
+      md: "1060px",
+      lg: "1200px",
+      xl: "1700px",
+    },
   },
   plugins: [],
-}
+};
