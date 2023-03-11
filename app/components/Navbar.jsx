@@ -14,13 +14,13 @@ const Navbar = () => {
 
   return (
     <nav className='flex w-full flex-row justify-between 
-    pt-1 pb-2 items-center bg-gray-200 backdrop-opacity-5 z-2'>
+    pt-1 pb-2 items-center bg-[#F2F5FA] relative z-50 '>
       <div className='flex justify-start items-center'>
         <Image src={logo} alt='logo' className='w-[90px] h-[20px]' />
         
       </div>
       <ul className='sm:flex hidden flex-1 uppercase justify-center items-center'>
-        {['home', 'about', 'contact', 'work', 'skills'].map((item) =>
+        {['home', 'about', 'skills', 'work', 'blog', 'contact'].map((item) =>
         <li key={`link-${item}`}  className='flex-col sm:mx-4 mx-2 
         rounded-full mb-2 pointer bg-transparent'>
           <div className='w-[5px] h-[5px]'/>
@@ -29,20 +29,20 @@ const Navbar = () => {
       </ul>
 
       {/* Mobile menu */}
-      <div className='w-[35px] h-[35px] flex sm:hidden justify-center 
-      bg-secondarycolor items-center relative rounded-full'>
+      <div className='w-[35px] h-[35px] relative  flex  sm:hidden justify-center 
+      bg-secondarycolor items-center  rounded-full'>
         <HiMenuAlt4 className=' w-[70%] h-[70%]' onClick={() => setToggle(true)}/>
        
        {toggle && (
         <motion.div 
         whileInView={{ x: [200, 0]}}
         transition= {{duration: 0.85, ease: 'easeOut'}} 
-        className='fixed top-0 bottom-0 right-0  p-4 w-[60%]  h-[100%] 
-        flex justify-start items-start flex-col bg-whitecolor'>
+        className='fixed top-0 bottom-0 right-0 p-4 w-[80%]  h-[100vh] 
+         flex justify-end items-end flex-col bg-white'>
           <HiX onClick={() => setToggle((prev) => !prev)}
-          className='w-[70%] h-[70%]  text-secondarycolor '/>
+          className='w-[30px] h-[30px]  text-secondarycolor '/>
           <ul className='list-none uppercase h-[100%] w-[100%] flex justify-start flex-col items-start'>
-            {['home', 'about', 'contact', 'work', 'skills'].map((item) =>
+            {['home', 'about', 'skills', 'work', 'blog', 'contact'].map((item) =>
             <li key={item}  className='m-4  '>            
               <a href={`#${item}`} onClick={() => setToggle((prev) => !prev)}
               className='no-underline text-graycolor font-bold
