@@ -29,13 +29,13 @@ const Navbar = () => {
       </ul>
 
       {/* Mobile menu */}
-      <div className='w-[35px] h-[35px] relative  flex  sm:hidden justify-center 
+      <div className='w-[35px] h-[35px] relative  flex mr-5 sm:hidden justify-center 
       bg-secondarycolor items-center  rounded-full'>
-        <HiMenuAlt4 className=' w-[70%] h-[70%]' onClick={() => setToggle(true)}/>
+        <HiMenuAlt4 className=' w-[70%] h-[70%] text-white' onClick={() => setToggle(true)}/>
        
        {toggle && (
         <motion.div 
-        whileInView={{ x: [200, 0]}}
+        whileInView={{ x: [300, 0]}}
         transition= {{duration: 0.85, ease: 'easeOut'}} 
         className='fixed top-0 bottom-0 right-0 p-4 w-[80%]  h-[100vh] 
          flex justify-end items-end flex-col bg-white'>
