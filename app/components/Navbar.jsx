@@ -16,7 +16,7 @@ const Navbar = () => {
     <nav className='flex fixed w-full flex-row justify-between 
     pt-1 pb-2 items-center bg-[#F2F5FA]  z-50 '>
       <div className='flex justify-start items-center'>
-        <Image src={logo} alt='logo' className='w-[90px] h-[20px]' />
+        <Image src={logo} alt='logo' className='w-[90px] h-[20px] ml-3' />
         
       </div>
       <ul className='sm:flex hidden flex-1 uppercase justify-center items-center'>

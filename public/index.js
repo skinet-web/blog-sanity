@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import logo from "./logo2.svg";
 import javascript from "./javascript.png";
 import git from "./git.png";
 import figma from "./figma.png";
