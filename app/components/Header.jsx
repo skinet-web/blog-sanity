@@ -17,14 +17,14 @@ const scaleVariants = {
 
 const Header = () => {
   return (
-    <div className='font-poppins   lg:h-[40em] md:h-[46em] h-[40em] w-full flex flex-col sm:flex-row flex-1 
-    justify-center items-center bg-[#EDF2F8]' >
+    <div id='home' className='font-poppins lg:h-[44em] md:h-[48em] h-[43em] w-full flex flex-col 
+    sm:flex-row flex-1 justify-center items-center bg-[#EDF2F8]' >
       <motion.div 
       whileInView={{ x: [-100, 0], opacity: [0, 1]}}
       transition={{ duration: 0.5}}
       className=''>
         <div className='flex bg-[white] bg-opacity-60 sm:mr-36 z-0 w-max p-10 rounded-xl justify-center 
-        items-center mt-10  box--shadow ' >
+        items-center mt-20 sm:mt-0 box--shadow ' >
                 <span className='text-4xl'>👋</span>
                 <div className='ml-2 font-sem'>
                     <p className=''>Hello, I am</p>

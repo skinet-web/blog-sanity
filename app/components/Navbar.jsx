@@ -13,8 +13,8 @@ const Navbar = () => {
  const [toggle, setToggle] = useState(false)
 
   return (
-    <nav className='flex w-full flex-row justify-between 
-    pt-1 pb-2 items-center bg-[#F2F5FA] relative z-50 '>
+    <nav className='flex fixed w-full flex-row justify-between 
+    pt-1 pb-2 items-center bg-[#F2F5FA]  z-50 '>
       <div className='flex justify-start items-center'>
         <Image src={logo} alt='logo' className='w-[90px] h-[20px]' />
         
