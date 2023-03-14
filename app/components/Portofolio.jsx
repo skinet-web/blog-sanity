@@ -22,7 +22,7 @@ const Portofolio = () => {
     }, []);
 
   return (
-    <div className='flex flex-col justify-center font-poppins items-center'>
+    <div className='flex flex-col justify-center font-poppins items-center '>
           <h1 className='mt-10 text-center font-bold uppercase text-2xl'>Portofolio</h1>
           <p>Each project is a unique piece of development 🧩</p>  
 
@@ -36,17 +36,17 @@ const Portofolio = () => {
                 </div>
             ))}
           </div>
-          <motion.div className='flex flex-col  justify-center items-center '>
+          <motion.div className='flex flex-col p-2 justify-center items-center '>
             {filterWork.map((work, index) => (
-                <div key={index} className='flex flex-wrap justify-center items-center
-                 rounded-xl w-[80%] box--shadow mt-10'>
+                <div key={index} className='flex flex-col justify-center items-center
+                 rounded-xl w-[90%] box--shadow mt-10'>
                     <div className='flex justify-center m-5'>
                     <Image src={urlFor(work.imgUrl).url()} width='500' height='500' alt='work-name' 
-                        className='box--shadow rounded-xl object-contain'/>
+                        className='box--shadow rounded-xl  object-contain'/>
                     </div>
-                    <div className='flex flex-col   justify-center items-center'>
+                    <div className='flex flex-col  justify-center items-center'>
                         <h3 className='m-3 font-bold text-xl uppercase'>{work.title}</h3>
-                        <p className='w-[70%]'>{work.description}</p>
+                        <p className='w-[70%] '>{work.description}</p>
                         <div>
                             <p className='mt-3'>{work.tags}</p>                            
                         </div>
