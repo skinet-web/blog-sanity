@@ -22,7 +22,7 @@ const Portofolio = () => {
     }, []);
 
   return (
-    <div className='flex flex-col justify-center font-poppins items-center '>
+    <div id='work' className='flex flex-col justify-center font-poppins items-center '>
           <h1 className='mt-10 text-center font-bold uppercase text-2xl'>Portofolio</h1>
           <p>Each project is a unique piece of development 🧩</p>  
 
