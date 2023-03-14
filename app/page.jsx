@@ -1,6 +1,7 @@
 import About from "./components/About"
 import Header from "./components/Header"
-import Navbar from "./components/Navbar"
+
+import Portofolio from "./components/Portofolio"
 
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
        
        <Header />
        <About />
+       <Portofolio />
     </div>
   )
 }
