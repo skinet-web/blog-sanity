@@ -7,7 +7,7 @@ import { urlFor, client } from '../client'
 import Image from 'next/image';
 
 const Portofolio = () => {
-    
+    const [activeFilter, setActiveFilter] = useState('All');
     const [works, setWorks] = useState([]);
     const [filterWork, setFilterWork] = useState([]);
     const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
@@ -23,7 +23,7 @@ const Portofolio = () => {
     }, []);
 
     const handleWorkFilter = (item) => {
-        
+        setActiveFilter(item);
         setAnimateCard([{ y: 100, opacity: 0 }]);
 
         setTimeout(() => {
@@ -45,7 +45,8 @@ const Portofolio = () => {
                 <div 
                     key={index}
                     onClick={() => handleWorkFilter(item)}
-                    className='bg-white px-2 rounded-xl cursor-pointer  hover:(bg-black, text-white)'>
+                    className={`bg-white px-2 rounded-md cursor-pointer  hover:bg-secondarycolor hover:text-white
+                    ${activeFilter === item ? 'bg-[#32a2a8]' : ''}  `}>
                         {item}
                 </div>
             ))}
@@ -53,27 +54,30 @@ const Portofolio = () => {
           <motion.div 
           animate={animateCard}
           transition={{ duration: 0.5, delayChildren: 0.5 }}
-          className='flex flex-col p-2 justify-center items-center '>
+          className='flex flex-col p-2 justify-center items-center'>
             {filterWork.map((work, index) => (
                 <div key={index} className='flex flex-col justify-center items-center
-                 rounded-xl w-[90%] box--shadow mt-10'>
+                 rounded-xl w-[90%] box--shadow mt-10   bg-white'>
                     <div className='flex justify-center m-5'>
                     <Image src={urlFor(work.imgUrl).url()} width='500' height='500' alt='work-name' 
                         className='box--shadow rounded-xl  object-contain'/>
                     </div>
                     <div className='flex flex-col  justify-center items-center'>
                         <h3 className='m-3 font-bold text-xl uppercase'>{work.title}</h3>
-                        <p className='w-[70%] '>{work.description}</p>
-                        <div>
-                            <p className='mt-3'>{work.tags}</p>                            
+                        <p className='w-[80%] text-justify text-[#767676] '>{work.description}</p>
+                        <div className='flex font-medium gap-3'>
+                            {work.tags.map((item, index) => (
+                                <p key={index} className='mt-3 p-1 bg-white shadow-md 
+                                text-[80%] font-semibold rounded-md'>{item} </p>     
+                            ))}                       
                         </div>
-                        <div className='flex m-3 gap-10 justify-center items-center'>
-                            <a className='flex justify-center items-center hover:text-blue-600 
+                        <div className='flex mt-10 mb-5 gap-10 justify-center items-center'>
+                            <a className='flex justify-center items-center hover:text-secondarycolor
                             transition-colors duration-500 ease-in-out' 
                             href={work.codeLink}> 
                             Code <AiFillGithub className='ml-1 text-2xl'/> 
                             </a>       
-                            <a className='flex justify-center items-center hover:text-blue-600 
+                            <a className='flex justify-center items-center hover:text-secondarycolor
                             transition-colors duration-500 ease-in-out' 
                             href={work.projectLink}> 
                             Live Demo <AiFillEye className='ml-1 text-2xl'/> 
