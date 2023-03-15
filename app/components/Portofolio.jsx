@@ -7,9 +7,10 @@ import { urlFor, client } from '../client'
 import Image from 'next/image';
 
 const Portofolio = () => {
-    const [activeFilter, setActiveFilter] = useState('All');
+    
     const [works, setWorks] = useState([]);
     const [filterWork, setFilterWork] = useState([]);
+    const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
     useEffect(() => {
         const query = '*[_type == "works"]';
@@ -21,22 +22,38 @@ const Portofolio = () => {
           });
     }, []);
 
+    const handleWorkFilter = (item) => {
+        
+        setAnimateCard([{ y: 100, opacity: 0 }]);
+
+        setTimeout(() => {
+            setAnimateCard([{ y: 0, opacity: 1 }]);
+            if (item === 'All') {
+              setFilterWork(works);
+            } else {
+              setFilterWork(works.filter((work) => work.tags.includes(item)));
+            }
+          }, 500);
+        };
   return (
-    <div id='work' className='flex flex-col justify-center font-poppins items-center '>
+    <div id='work' className='flex flex-col justify-center font-poppins items-center bg-[#EDF2F8] '>
           <h1 className='mt-10 text-center font-bold uppercase text-2xl'>Portofolio</h1>
           <p>Each project is a unique piece of development 🧩</p>  
 
-          <div>
-            {['React JS', 'Tailwind CSS', 'All'].map((item, index) => (
+          <div className='flex justify-center items-center gap-5 mt-10'>
+            {['ReactJS', 'Tailwind CSS', 'All'].map((item, index) => (
                 <div 
                     key={index}
                     onClick={() => handleWorkFilter(item)}
-                    className=''>
+                    className='bg-white px-2 rounded-xl cursor-pointer  hover:(bg-black, text-white)'>
                         {item}
                 </div>
             ))}
           </div>
-          <motion.div className='flex flex-col p-2 justify-center items-center '>
+          <motion.div 
+          animate={animateCard}
+          transition={{ duration: 0.5, delayChildren: 0.5 }}
+          className='flex flex-col p-2 justify-center items-center '>
             {filterWork.map((work, index) => (
                 <div key={index} className='flex flex-col justify-center items-center
                  rounded-xl w-[90%] box--shadow mt-10'>
