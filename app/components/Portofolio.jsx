@@ -38,7 +38,7 @@ const Portofolio = () => {
   return (
     <div id='work' className='flex flex-col justify-center font-poppins items-center bg-[#EDF2F8] '>
           <h1 className='mt-10 text-center font-bold uppercase text-2xl'>Portofolio</h1>
-          <p>Each project is a unique piece of development 🧩</p>  
+          <p>Each project is a unique piece of development  🧩</p>  
 
           <div className='flex justify-center items-center gap-5 mt-10'>
             {['ReactJS', 'Tailwind CSS', 'All'].map((item, index) => (
@@ -75,7 +75,7 @@ const Portofolio = () => {
                             <a className='flex justify-center items-center hover:text-secondarycolor
                             transition-colors duration-500 ease-in-out' 
                             href={work.codeLink}> 
-                            Code <AiFillGithub className='ml-1 text-2xl'/> 
+                            Code <AiFillGithub className='ml-1 text-2xl '/> 
                             </a>       
                             <a className='flex justify-center items-center hover:text-secondarycolor
                             transition-colors duration-500 ease-in-out' 
