@@ -54,7 +54,7 @@ const Portofolio = () => {
           <motion.div 
           animate={animateCard}
           transition={{ duration: 0.5, delayChildren: 0.5 }}
-          className='flex flex-col p-2 justify-center items-center'>
+          className='flex flex-col p-2 mb-20 justify-center items-center'>
             {filterWork.map((work, index) => (
                 <div key={index} className='flex flex-col justify-center items-center
                  rounded-xl w-[90%] box--shadow mt-10   bg-white'>
