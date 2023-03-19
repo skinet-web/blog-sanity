@@ -30,7 +30,7 @@ const Skills = () => {
     }, []);
 
   return (
-    <div className='flex  flex-col justify-center items-center font-poppins'>
+    <div id="skills" className='flex  flex-col justify-center items-center font-poppins'>
         <h1 className='mt-10  font-bold'>
         Tech Stack 
         </h1>
@@ -40,7 +40,8 @@ const Skills = () => {
        
         className='flex  flex-wrap my-5 gap-5 justify-center items-center'>
             {skills.map((item, index) => (
-                <div key={index} className='flex bg-[#EDF2F8]  xs:w-[10%] w-[15%] rounded-xl justify-center items-center '>
+                <div key={index} className='flex bg-[#EDF2F8]  xs:w-[10%] w-[15%] 
+                min-h-[55px] rounded-xl justify-center items-center '>
                     <Image src={urlFor(item.imgUrl).url()} width='100' height='100' alt={item.title} title={item.title}
                     className='object-contain p-2 cursor-pointer'/> 
                 </div>

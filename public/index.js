@@ -7,6 +7,8 @@ import college from "./college-study.png";
 import plant from "./3dplant.jpg";
 import render from "./3drender.jpg";
 import webdev from "./webdev.jpg";
+import emailIcon from "./email.png";
+import location from "./location.png";
 
 export {
   logo,
@@ -18,4 +20,6 @@ export {
   college,
   render,
   webdev,
+  emailIcon,
+  location,
 };
