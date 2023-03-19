@@ -37,11 +37,11 @@ const Portofolio = () => {
         };
   return (
     <div id='work' className='flex flex-col justify-center font-poppins items-center bg-[#EDF2F8] '>
-          <h1 className='mt-10 text-center font-bold uppercase text-2xl'>Portofolio</h1>
-          <p>Each project is a unique piece of development  🧩</p>  
+          <h1 className='my-10 text-center font-bold uppercase text-2xl'>Portofolio</h1>
+          <p className=''>Each project is a unique piece of development  🧩</p>  
 
           <div className='flex justify-center items-center gap-5 mt-10'>
-            {['ReactJS', 'Tailwind CSS', 'All'].map((item, index) => (
+            {['ReactJS', 'Tailwind CSS', 'Sass', 'All'].map((item, index) => (
                 <div 
                     key={index}
                     onClick={() => handleWorkFilter(item)}
@@ -57,7 +57,7 @@ const Portofolio = () => {
           className='flex flex-col p-2 mb-20 justify-center items-center'>
             {filterWork.map((work, index) => (
                 <div key={index} className='flex flex-col justify-center items-center
-                 rounded-xl w-[90%] box--shadow mt-10   bg-white'>
+                 rounded-xl w-[90%] sm:w-[60%] transition-all box--shadow mt-10   bg-white'>
                     <div className='flex justify-center m-5'>
                     <Image src={urlFor(work.imgUrl).url()} width='500' height='500' alt='work-name' 
                         className='box--shadow rounded-xl  object-contain'/>
