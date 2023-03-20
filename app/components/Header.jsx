@@ -17,7 +17,20 @@ const scaleVariants = {
   }
 }
 
+
+
 const Header = () => {
+  const waveVariants = {
+    wave: {
+      rotate: [0, 0, 0, 0, 0, ],
+      transition: {
+        duration: 1.5,
+        repeat: Infinity,
+        repeatType: "loop",
+      },
+    },
+  };
+
   return (
     // <div id='home' className='font-poppins lg:h-[44em] md:h-[48em] h-[43em] w-full flex flex-col 
     // sm:flex-row flex-1 justify-center items-center bg-[#EDF2F8]' >
@@ -53,24 +66,36 @@ const Header = () => {
     // </div>
     <section className='w-[100%] bg-[#EDF2F8]'>
       <div className='max-w-[107rem] mx-auto'>
-        <div id='home' className='flex flex-col-reverse sm:flex-row relative h-[58rem] 
+        <div id='home'        
+        className='flex flex-col-reverse sm:flex-row relative h-[58rem] 
       justify-center items-center gap-20 font-poppins '>        
-          <div className='flex flex-col sm:ml-20 justify-center  items-center text-center sm:text-start sm:items-start max-w-[30rem]'>
-            <h1 className='text-[40px]  sm:text-[50px] font-bold'>
-              Front-End React Developer <span className='text-4xl'>👋</span>
+          <motion.div 
+           whileInView={{ x: [-400, 0], opacity: [0, 1]}}
+           transition={{ duration: 0.8}}
+          className='flex flex-col sm:ml-20 justify-center  items-center text-center sm:text-start sm:items-start max-w-[30rem]'>
+            <h1 className='text-[40px] sm:text-[50px] font-bold'>
+              Front-End React Developer <span      
+              className='text-4xl'>👋</span>
             </h1>            
             <p className='text-center mt-10 sm:text-start leading-8 text-xl text-[#767676]'>
               Hi, I'm Mihai. I am responsible for creating and 
               maintaining web applications and websites using a variety of programming languages, frameworks, and tools.
             </p>
             <div className='flex mt-10 justify-center items-center'>
-              <AiFillGithub className=' text-3xl '/>
-              <AiFillLinkedin className='ml-10 text-3xl  '/>
+              <a href='https://github.com/skinet-web'><AiFillGithub className=' text-3xl '/></a>
+              <a href='https://www.linkedin.com/in/mihai-s%C4%83cuiu-2a1b29167/'>
+                <AiFillLinkedin className='ml-10 text-3xl'/>
+              </a>
+              
             </div>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+             variants={scaleVariants}
+             whileInView={scaleVariants.whileInView}
+             transition={{duration: 1, ease: 'easeInOut'}}
+          >
             <Image src={dev} className='w-[40rem] object-contain' />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

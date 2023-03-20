@@ -10,6 +10,7 @@ import webdev from "./webdev.jpg";
 import emailIcon from "./email.png";
 import location from "./location.png";
 import dev from "./dev.png";
+import coding from "./coding.png";
 
 export {
   logo,
@@ -24,4 +25,5 @@ export {
   emailIcon,
   location,
   dev,
+  coding,
 };
