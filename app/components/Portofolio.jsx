@@ -40,7 +40,7 @@ const Portofolio = () => {
           <h1 className='my-10 text-center font-bold uppercase text-2xl'>Portofolio</h1>
           <p className=''>Each project is a unique piece of development  🧩</p>  
 
-          <div className='flex justify-center items-center gap-5 mt-10'>
+          <div className='flex flex-wrap justify-center items-center gap-5 mt-10'>
             {['ReactJS', 'Tailwind CSS', 'JavaScript', 'Sass', 'All'].map((item, index) => (
                 <div 
                     key={index}

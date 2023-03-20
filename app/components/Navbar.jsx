@@ -37,7 +37,7 @@ const Navbar = () => {
         <motion.div 
         whileInView={{ x: [300, 0]}}
         transition= {{duration: 0.85, ease: 'easeOut'}} 
-        className='fixed top-0 bottom-0 right-0 p-4 w-[80%]  h-[100vh] 
+        className='fixed top-0 bottom-0 right-0 p-4  w-[80%] h-[100vh] 
          flex justify-end items-end flex-col bg-white'>
           <HiX onClick={() => setToggle((prev) => !prev)}
           className='w-[30px] h-[30px]  text-secondarycolor '/>

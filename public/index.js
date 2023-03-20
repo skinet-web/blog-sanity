@@ -9,6 +9,7 @@ import render from "./3drender.jpg";
 import webdev from "./webdev.jpg";
 import emailIcon from "./email.png";
 import location from "./location.png";
+import dev from "./dev.png";
 
 export {
   logo,
@@ -22,4 +23,5 @@ export {
   webdev,
   emailIcon,
   location,
+  dev,
 };
