@@ -30,8 +30,8 @@ const About = () => {
     }, []);
 
   return (
-    <div id='about' className='flex-1 flex-col font-poppins'>
-        <h2 className='mt-10 text-center font-bold uppercase text-2xl'>About</h2>
+    <div id='about' className='mt-20 flex-1 flex-col font-poppins'>
+        <h2  className=' text-center font-bold uppercase text-2xl'>About</h2>
 
         <div className='flex flex-wrap justify-center items-center mt-10'>
             {abouts.map((about, index) => (
