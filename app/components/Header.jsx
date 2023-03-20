@@ -70,6 +70,7 @@ const Header = () => {
         className='flex flex-col-reverse sm:flex-row relative h-[58rem] 
       justify-center items-center gap-20 font-poppins '>        
           <motion.div 
+           initial={{ opacity: 0 } }
            whileInView={{ x: [-400, 0], opacity: [0, 1]}}
            transition={{ duration: 0.8}}
           className='flex flex-col sm:ml-20 justify-center  items-center text-center sm:text-start sm:items-start max-w-[30rem]'>
@@ -90,6 +91,7 @@ const Header = () => {
             </div>
           </motion.div>
           <motion.div
+             initial={{ opacity: 0 } }
              variants={scaleVariants}
              whileInView={scaleVariants.whileInView}
              transition={{duration: 1, ease: 'easeInOut'}}
