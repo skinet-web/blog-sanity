@@ -71,7 +71,7 @@ const Header = () => {
       justify-center items-center gap-20 font-poppins '>        
           <motion.div 
            initial={{ opacity: 0 } }
-           whileInView={{ x: [-400, 0], opacity: [0, 1]}}
+           whileInView={{ x: [-300, 0], opacity: [0, 1]}}
            transition={{ duration: 0.8}}
           className='flex flex-col sm:ml-20 justify-center  items-center text-center sm:text-start sm:items-start max-w-[30rem]'>
             <h1 className='text-[40px] sm:text-[50px] font-bold'>
