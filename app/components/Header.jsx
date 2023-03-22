@@ -75,7 +75,7 @@ const Header = () => {
            transition={{ duration: 0.8}}
           className='flex flex-col sm:ml-20 justify-center  items-center text-center sm:text-start sm:items-start max-w-[30rem]'>
             <h1 className='text-[40px] sm:text-[50px] font-bold'>
-              Front-End React Developer <span      
+              Front-End React Developer  <span      
               className='text-4xl'>👋</span>
             </h1>            
             <p className='text-center mt-10 sm:text-start leading-8 text-xl text-[#767676]'>
