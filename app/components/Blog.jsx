@@ -32,8 +32,8 @@ const Blog = () => {
                         <Image src={urlFor(item.coverImage).url()} width='500' height='500' alt='work-name' 
                             className='box--shadow rounded-xl  object-contain'/>
                         </div>
-                        <div className='flex flex-col  justify-center items-center'>
-                            <h3 className='m-3 font-bold text-xl uppercase'>{item.title}</h3>
+                        <div className='flex flex-col mb-10 justify-center items-center'>
+                            <h3 className='m-3 font-bold text-xl uppercase w-[80%] text-center'>{item.title}</h3>
                             <p className='w-[80%] text-justify text-[#767676] '>{item.body}</p>
                                                     
                         </div>
