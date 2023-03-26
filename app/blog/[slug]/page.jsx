@@ -1,6 +1,6 @@
 import { urlFor, client } from '../../client';
 import Image from 'next/image';
-
+import Link from 'next/link';
 import {PortableText} from '@portabletext/react'
 
 
@@ -19,7 +19,7 @@ export default async function Post({params}) {
 
 
   return (
-    <div className='flex flex-col justify-center items-center '>
+    <div className='flex flex-col justify-center items-center mb-20'>
       <div  className='flex flex-col justify-center items-center
             rounded-xl w-[90%] sm:w-[60%] transition-all box--shadow mt-20   bg-white'>
                 
@@ -34,11 +34,13 @@ export default async function Post({params}) {
                             </div>
                                                
                         </div>
-                        
-                            <button className='rounded p-2 mb-10   transition-all text-white bg-[#32a2a8]'>Learn more</button>
-                                
-               
-            </div>
+                        <Link href={'/'}>
+                        <button 
+                        className='rounded p-2 mb-10   transition-all text-white bg-[#32a2a8]'>
+                        Go back</button>
+                        </Link>                        
+                                                                 
+       </div>
       
     </div>
   );
