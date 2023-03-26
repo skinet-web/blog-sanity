@@ -7,15 +7,6 @@ import { urlFor, client } from '../client'
 
 import { college, plant, render, webdev } from 'public'
 
-// const abouts = [
-//     { title: 'Learning', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor', imgUrl: college},
-//     { title: 'Fast', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor', imgUrl:plant},
-//     { title: 'Fast', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor', imgUrl:render},
-//     { title: 'Fast', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor', imgUrl:webdev},
-// ]
-
-
-
 const About = () => {
     const [abouts, setAbouts] = useState([]);
 
@@ -30,21 +21,21 @@ const About = () => {
     }, []);
 
   return (
-    <div id='about' className='mt-20 flex-1 flex-col font-poppins'>
+    <div id='about' className='mt-20 flex flex-col items-center  justify-center font-poppins'>
         <h2  className=' text-center font-bold uppercase text-2xl'>About</h2>
 
-        <div className='flex flex-wrap justify-center items-center mt-10'>
+        <div className='flex flex-col sm:flex-row  justify-center items-center w-[80%] gap-5 mt-10'>
             {abouts.map((about, index) => (
                 <motion.div
                     whileInView={{ opacity: 1 }}
                     whileHover={{scale: 1.1 }}
                     transition={{ duration: 0.5, type: 'tween'}}
                     key={about.title + index}
-                    className='flex justify-start  items-start flex-col m-2 w-[190px]'>
-                        <Image src={urlFor(about.imgUrl).url()} width='500' height='500' alt='about-picture' className='w-[100%]
-                         height-[170px] rounded-md object-cover'/>
+                    className='flex  justify-start items-start w-full min-h-[350px] flex-col m-2 '>
+                        <Image src={urlFor(about.imgUrl).url()} width='400' height='400' alt='about-picture' 
+                        className='rounded-md object-cover w-full '/>
                         <h2 alt='about-title' className='font-bold' >{about.title}</h2>    
-                        <p alt='about-p'className='text-sm'>{about.description}</p>
+                        <p alt='about-p'className='text-sm   text-justify'>{about.description}</p>
                 </motion.div>
             ))}
         </div>
