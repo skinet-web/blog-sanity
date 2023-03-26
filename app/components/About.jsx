@@ -24,7 +24,7 @@ const About = () => {
     <div id='about' className='mt-20 flex flex-col items-center  justify-center font-poppins'>
         <h2  className=' text-center font-bold uppercase text-2xl'>About</h2>
 
-        <div className='flex flex-col sm:flex-row  justify-center items-center w-[80%] gap-5 mt-10'>
+        <div className='flex flex-col sm:flex-row  justify-center items-center gap-5 w-[80%] mt-5'>
             {abouts.map((about, index) => (
                 <motion.div
                     whileInView={{ opacity: 1 }}

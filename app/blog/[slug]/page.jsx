@@ -34,7 +34,7 @@ export default async function Post({params}) {
                             </div>
                                                
                         </div>
-                        <Link href={'/'}>
+                        <Link href={`/#home`}>
                         <button 
                         className='rounded p-2 mb-10   transition-all text-white bg-[#32a2a8]'>
                         Go back</button>

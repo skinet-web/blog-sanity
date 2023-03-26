@@ -78,7 +78,7 @@ const Header = () => {
               Front-End React Developer  <span      
               className='text-4xl'>👋</span>
             </h1>            
-            <p className='text-center mt-10 sm:text-start leading-8 text-xl text-[#767676]'>
+            <p className=' mt-10 sm:text-start w-[80%] sm:w-full text-justify leading-8 text-xl text-[#767676]'>
               Hi, I'm Mihai. I am responsible for creating and 
               maintaining web applications and websites using a variety of programming languages, frameworks, and tools.
             </p>
