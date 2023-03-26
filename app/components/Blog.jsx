@@ -25,7 +25,7 @@ const Blog = () => {
     <div id='blog' className='flex flex-col justify-center items-center font-poppins'>
         <h2 className='mt-20 mb-10 text-center font-bold uppercase text-2xl'>BLOG</h2>
         {post.map((item) => (
-            <Link key={item.slug.current} href={`/blog/${item.slug.current}` } className='flex flex-col justify-center items-center
+            <div key={item.slug.current}  className='flex flex-col justify-center items-center
             rounded-xl w-[90%] sm:w-[60%] transition-all box--shadow mt-10   bg-white'>
                 
                         <div className='flex justify-center m-5'>
@@ -34,12 +34,14 @@ const Blog = () => {
                         </div>
                         <div className='flex flex-col mb-10 justify-center items-center'>
                             <h3 className='m-3 font-bold text-xl uppercase w-[80%] text-center'>{item.title}</h3>
-                            <p className='w-[80%] text-justify text-[#767676] '>{item.body}</p>
+                            <p className='w-[80%] text-justify text-[#767676] '>{item.postDescription}</p>
                                                     
                         </div>
-                                          
+                        <Link href={`/blog/${item.slug.current}`}>
+                            <button className='rounded p-2 mb-10   transition-all text-white bg-[#32a2a8]'>Learn more</button>
+                        </Link>                    
                
-            </Link>
+            </div>
         ))}
     </div>
   )

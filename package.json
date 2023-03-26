@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@portabletext/react": "^2.0.2",
+    "@sanity/block-content-to-react": "^3.0.0",
     "@sanity/client": "^5.3.0",
     "@sanity/image-url": "^1.0.2",
     "eslint": "8.35.0",
