@@ -1,6 +1,6 @@
 NEXT.JS 13 with experimental app directory Tailwind and CMS
 
-![](animation.gif)
+![](https://gifyu.com/image/SI4cv)
 
 More like an experimental project.
 
