@@ -34,7 +34,7 @@ const Header = () => {
   };
 
   return ( 
-    <section className='w-[100%] bg-[#EDF2F8]'>
+    <section className='w-[100%] sm:h-[64rem] lg:h-[56rem] xl:h-[67rem] bg-[#EDF2F8]'>
       <div className='max-w-[107rem] mx-auto'>
         <div id='home'        
         className='flex flex-col-reverse sm:flex-row relative h-[58rem] 
