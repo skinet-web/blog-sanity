@@ -12,6 +12,6 @@ Welcome to my full-stack portfolio website, built with Next.js 13, Tailwind CSS,
 - Blog posts about my work, design process, and tips and tricks for building websites and applications
 - Portfolio showcasing recent projects, with descriptions of the technologies used and problems solved
 - A focus on solving problems and creating experiences that people love
-  -A passion for making projects both beautiful and functional
-  -Open to new challenges and opportunities for growth
-  -Thank you for visiting my website, and I hope you enjoy exploring my work!
+- A passion for making projects both beautiful and functional
+- Open to new challenges and opportunities for growth
+- Thank you for visiting my website, and I hope you enjoy exploring my work!
