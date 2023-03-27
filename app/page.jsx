@@ -4,10 +4,14 @@ import Contact from "./components/Contact"
 import Portofolio from "./components/Portofolio"
 import Skills from "./components/Skills"
 import Blog from "./components/Blog"
+import NavigationDots from "./components/NavigationDots"
+
 
 
 export default function Home() {
-  return (
+  
+
+   return (
     <div className=' '>       
        <Header />
        <About />
@@ -15,6 +19,7 @@ export default function Home() {
        <Portofolio />
        <Blog />
        <Contact />
+       {/* <NavigationDots active={id}/> */}
     </div>
   )
 }

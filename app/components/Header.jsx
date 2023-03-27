@@ -4,6 +4,7 @@ import { logo, tailwind, javascript, git, figma, dev } from 'public'
 import { motion } from 'framer-motion'
 import Image from 'next/image';
 import {AiFillLinkedin, AiFillGithub} from 'react-icons/ai'
+import { AppWrap } from '../wrapper';
 
 
 const scaleVariants = {
@@ -20,6 +21,7 @@ const scaleVariants = {
 
 
 const Header = () => {
+
   const waveVariants = {
     wave: {
       rotate: [0, 0, 0, 0, 0, ],
@@ -31,39 +33,7 @@ const Header = () => {
     },
   };
 
-  return (
-    // <div id='home' className='font-poppins lg:h-[44em] md:h-[48em] h-[43em] w-full flex flex-col 
-    // sm:flex-row flex-1 justify-center items-center bg-[#EDF2F8]' >
-    //   <motion.div 
-    //   whileInView={{ x: [-100, 0], opacity: [0, 1]}}
-    //   transition={{ duration: 0.5}}
-    //   className=''>
-    //     <div className='flex bg-[white] bg-opacity-60 sm:mr-36 z-0 w-max p-10 rounded-xl justify-center 
-    //     items-center mt-20 sm:mt-0 box--shadow ' >
-    //             <span className='text-4xl'>👋</span>
-    //             <div className='ml-2 font-sem'>
-    //                 <p className=''>Hello, I am</p>
-    //                 <h1 className ='text-4xl font-bold'>Michael</h1>
-    //             </div>                
-    //         </div>
-    //   </motion.div>
-    //   <motion.div 
-    //     variants={scaleVariants}
-    //     whileInView={scaleVariants.whileInView}
-    //     transition={{duration: 1, ease: 'easeInOut'}}
-    //     className='flex flex-col justify-evenly item-start app--header-circles h-[100%]'
-    //     >
-    //     {[git, tailwind, javascript].map((circle, index)  => (
-    //       <div className='flex justify-center items-center w-[100px] h-[100px]
-    //       rounded-full mt-10 bg-white ' key={`circle-${index}`}>
-    //         <Image src={circle} className={`w-${80 - (index * 20)}`}alt='header-icons'/>
-    //       </div>
-    //     ))}
-        
-
-    //   </motion.div>
-        
-    // </div>
+  return ( 
     <section className='w-[100%] bg-[#EDF2F8]'>
       <div className='max-w-[107rem] mx-auto'>
         <div id='home'        
@@ -106,4 +76,5 @@ const Header = () => {
   )
 }
 
+// export default AppWrap(Header, 'home')
 export default Header

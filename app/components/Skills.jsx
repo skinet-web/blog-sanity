@@ -7,6 +7,7 @@ import Image from 'next/image';
 
 const Skills = () => {
 
+   
     const [skills, setSkills] = useState([])
 
     const scaleVariants = {
@@ -30,7 +31,7 @@ const Skills = () => {
     }, []);
 
   return (
-    <div id="skills" className='flex  flex-col justify-center items-center font-poppins my-10'>
+    <div  id='skills' className='flex  flex-col justify-center items-center font-poppins my-10'>
         <h1 className=' font-bold'>
         Tech Stack 
         </h1>
