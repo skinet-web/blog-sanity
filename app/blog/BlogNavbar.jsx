@@ -15,10 +15,10 @@ const BlogNavbar = ({}) => {
   return (
     <nav className='flex fixed w-full flex-row justify-between 
     pt-1 pb-2 items-center bg-[#F2F5FA]  z-50 '>
-      <div className='flex justify-start items-center'>
+      <a href='/' className='flex justify-start items-center'>
         <Image src={coding} alt='logo' className='w-[90px] h-[40px] object-contain ml-3' />
         
-      </div>
+      </a>
       <ul className='sm:flex hidden flex-1 uppercase justify-center items-center'>
         {['home', 'about', 'skills', 'work', 'blog', 'contact'].map((item) =>
         <li key={`link-${item}`}  className='flex-col sm:mx-4 mx-2 
