@@ -4,19 +4,12 @@ import {React, useState, useEffect} from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image';
 import { urlFor, client } from '../client'
-import { AppWrap } from '../wrapper';
-import { college, plant, render, webdev } from 'public'
+import { PortableText } from '@portabletext/react';
 
 const About = () => {
     const [abouts, setAbouts] = useState([]);
 
-    function scrollToPortion(portionId) {
-        const portionElement = document.getElementById(portionId);
-        if (portionElement) {
-          portionElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }
-
+    
     useEffect(() => {
         const query = '*[_type == "abouts"]';
 
@@ -29,7 +22,7 @@ const About = () => {
     <div id='about' className=' flex flex-col items-center mt-20 justify-center font-poppins scroll-mt-20'>
         <h2  className=' text-center font-bold uppercase text-2xl'>About</h2>
 
-        <div className='flex flex-col sm:flex-row  justify-center items-center gap-5 w-[80%] mt-5'>
+        <div className='flex flex-col sm:flex-row  justify-center items-center gap-5  w-[80%] mt-5'>
             {abouts.map((about, index) => (
                 <motion.div
                     whileInView={{ opacity: 1 }}
@@ -40,7 +33,10 @@ const About = () => {
                         <Image src={urlFor(about.imgUrl).url()} width='400' height='400' alt='about-picture' 
                         className='rounded-md object-cover w-full '/>
                         <h2 alt='about-title' className='font-bold' >{about.title}</h2>    
-                        <p alt='about-p'className='text-sm   text-justify'>{about.description}</p>
+                        <p alt='about-p'className='text-sm   text-justify'>
+                            <PortableText value={about.content} /> 
+                        </p>
+                        
                 </motion.div>
             ))}
         </div>
