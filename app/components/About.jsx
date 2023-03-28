@@ -10,7 +10,12 @@ import { college, plant, render, webdev } from 'public'
 const About = () => {
     const [abouts, setAbouts] = useState([]);
 
-   
+    function scrollToPortion(portionId) {
+        const portionElement = document.getElementById(portionId);
+        if (portionElement) {
+          portionElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
 
     useEffect(() => {
         const query = '*[_type == "abouts"]';
@@ -21,7 +26,7 @@ const About = () => {
     }, []);
 
   return (
-    <div id='about' className='mt-20 flex flex-col items-center  justify-center font-poppins'>
+    <div id='about' className=' flex flex-col items-center mt-20 justify-center font-poppins scroll-mt-20'>
         <h2  className=' text-center font-bold uppercase text-2xl'>About</h2>
 
         <div className='flex flex-col sm:flex-row  justify-center items-center gap-5 w-[80%] mt-5'>

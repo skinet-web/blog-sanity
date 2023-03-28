@@ -13,7 +13,7 @@ const Portofolio = () => {
     const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
     useEffect(() => {
-        const query = '*[_type == "works"]';
+        const query = '*[_type == "works"] | order(tags[0] desc)';
 
         client.fetch(query)
             .then((data) => {
@@ -46,7 +46,7 @@ const Portofolio = () => {
                     key={index}
                     onClick={() => handleWorkFilter(item)}
                     className={`bg-white px-2 rounded-md cursor-pointer  hover:bg-secondarycolor hover:text-white
-                    ${activeFilter === item ? 'bg-[#32a2a8]' : ''}  `}>
+                    ${activeFilter === item ? 'bg-[#32a4aa] text-white' : ''} `}>
                         {item}
                 </div>
             ))}

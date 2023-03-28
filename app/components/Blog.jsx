@@ -22,7 +22,7 @@ const Blog = () => {
     
 
   return (
-    <div id='blog' className='flex flex-col justify-center items-center font-poppins'>
+    <div id='blog' className='flex flex-col justify-center items-center font-poppins scroll-mt-10'>
         <h2 className='mt-20 mb-10 text-center font-bold uppercase text-2xl'>BLOG</h2>
         {post.map((item) => (
             <div key={item.slug.current}  className='flex flex-col justify-center items-center

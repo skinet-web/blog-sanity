@@ -31,7 +31,7 @@ const Skills = () => {
     }, []);
 
   return (
-    <div  id='skills' className='flex  flex-col justify-center items-center font-poppins my-10'>
+    <div  id='skills' className='flex  flex-col justify-center items-center font-poppins my-10 scroll-mt-20'>
         <h1 className=' font-bold'>
         Tech Stack 
         </h1>
