@@ -32,7 +32,7 @@ const Skills = () => {
 
   return (
     <div  id='skills' className='flex  flex-col justify-center items-center font-poppins my-10 scroll-mt-20'>
-        <h1 className=' font-bold'>
+        <h1 className=' font-bold text-2xl uppercase'>
         Tech Stack 
         </h1>
         <motion.div 

@@ -11,7 +11,7 @@ const About = () => {
 
     
     useEffect(() => {
-        const query = '*[_type == "abouts"]';
+        const query = '*[_type == "abouts"] | order(description asc)';
 
         client.fetch(query).then((data) => {
             setAbouts(data);
@@ -22,7 +22,7 @@ const About = () => {
     <div id='about' className=' flex flex-col items-center mt-20 justify-center font-poppins scroll-mt-20'>
         <h2  className=' text-center font-bold uppercase text-2xl'>About</h2>
 
-        <div className='flex flex-col sm:flex-row  justify-center items-center gap-5  w-[80%] mt-5'>
+        <div className='flex flex-col lg:flex-row w-[80%] sm:w-1/2 justify-center items-center gap-5 mt-10'>
             {abouts.map((about, index) => (
                 <motion.div
                     whileInView={{ opacity: 1 }}
@@ -33,7 +33,7 @@ const About = () => {
                         <Image src={urlFor(about.imgUrl).url()} width='400' height='400' alt='about-picture' 
                         className='rounded-md object-cover w-full '/>
                         <h2 alt='about-title' className='font-bold' >{about.title}</h2>    
-                        <p alt='about-p'className='text-sm   text-justify'>
+                        <p alt='about-p'className='text-sm mt-3  text-justify'>
                             <PortableText value={about.content} /> 
                         </p>
                         
