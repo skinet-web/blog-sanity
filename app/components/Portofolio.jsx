@@ -46,7 +46,7 @@ const Portofolio = () => {
                     key={index}
                     onClick={() => handleWorkFilter(item)}
                     className={`bg-white px-2 rounded-md cursor-pointer  hover:bg-secondarycolor hover:text-white
-                    ${activeFilter === item ? 'bg-[#2fa7ad] text-white' : ''} `}>
+                    ${activeFilter === item ? 'text-white bg-[#2eaeb4] ' : ''} `}>
                         {item}
                 </div>
             ))}

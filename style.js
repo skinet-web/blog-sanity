@@ -1,5 +1,5 @@
 const styles = {
-  socialBubble: "w-10 h-10 rounded-full  bg-white my-1 border border-gray-300",
+  socialHover: "hover:bg-secondarycolor hover:text-white",
   socialIcon:
     "w-10 h-10 rounded-full  bg-white my-1 border border-gray-300 flex justify-center hover:bg-secondarycolor hover:text-white items-center transition-all duration-300 ease-in-out",
 };

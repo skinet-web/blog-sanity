@@ -3,7 +3,7 @@ import React from 'react'
 import { logo, tailwind, javascript, git, figma, dev } from 'public'
 import { motion } from 'framer-motion'
 import Image from 'next/image';
-import {AiFillLinkedin, AiFillGithub} from 'react-icons/ai'
+import {AiFillLinkedin, AiFillGithub, AiFillRead} from 'react-icons/ai'
 import { AppWrap } from '../wrapper';
 
 
@@ -54,12 +54,15 @@ const Header = () => {
               Hi, I'm Mihai. I am responsible for creating and 
               maintaining web applications and websites using a variety of programming languages, frameworks, and tools.
             </p>
-            <div className='flex mt-10 justify-center items-center'>
-              <a href='https://github.com/skinet-web'>
-                <AiFillGithub className=' text-3xl '/>
+            <div className='flex mt-10 justify-center items-center '>
+              <a href='https://github.com/skinet-web' >
+                <AiFillGithub className='text-3xl ' title='Github'/>
               </a>
-              <a href='https://www.linkedin.com/in/mihai-s%C4%83cuiu-2a1b29167/'>
-                <AiFillLinkedin className='ml-10 text-3xl'/>
+              <a href='https://www.linkedin.com/in/mihai-s%C4%83cuiu-2a1b29167/' >
+                <AiFillLinkedin className='ml-10 text-3xl' title='Linkedin'/>
+              </a>
+              <a href='/resume.pdf' >
+                <AiFillRead  className='ml-10 text-3xl' title='Resume'/>
               </a>
               
             </div>
