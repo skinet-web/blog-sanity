@@ -1,6 +1,4 @@
 
-'use client'
-
 import About from "./components/About"
 import Header from "./components/Header"
 import Contact from "./components/Contact"
@@ -11,8 +9,12 @@ import NavigationDots from "./components/NavigationDots"
 import SocialMedia from "./components/SocialMedia"
 
 
+export const metadata = {
+   title: {
+     default: 'Mihai S | Front-end',
+   },
+ }
 
- 
 
 export default function Home() {
   

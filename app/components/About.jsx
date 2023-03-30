@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { urlFor, client } from '../client'
 import { PortableText } from '@portabletext/react';
 
+
 const About = () => {
     const [abouts, setAbouts] = useState([]);
 

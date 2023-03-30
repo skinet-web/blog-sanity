@@ -6,6 +6,10 @@ import SocialMedia from './components/SocialMedia'
 import Head from 'next/head'
 import { useState, useEffect } from 'react'
 
+export const metadata = {
+  title: '...',
+};
+
 export default function RootLayout({ children }) {
 
   const [loading, setLoading] = useState(true);
@@ -13,10 +17,10 @@ export default function RootLayout({ children }) {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 700);
   }, []);
 
- 
+
   return (
     <html lang="en">
       {loading ? (
@@ -36,3 +40,4 @@ export default function RootLayout({ children }) {
     </html>
   )
 }
+
