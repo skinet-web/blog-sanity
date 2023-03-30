@@ -1,6 +1,6 @@
 ![Gif text](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjI1ZTY0YzMyMjFiZDg4NWZhNmJlM2I0MWVkNWJkZjU3ZmI2NDIzMCZjdD1n/RiinbTUdlJ6eYvC91v/giphy.gif)
 
-Live: https://blog-cms2323.netlify.app/
+Live: https://portofoliomihai.netlify.app/
 
 Welcome to my full-stack portfolio website, built with Next.js 13, Tailwind CSS, and Sanity CMS. Here are some of the features you can expect to find:
 
