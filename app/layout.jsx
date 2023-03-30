@@ -7,8 +7,11 @@ import Head from 'next/head'
 import { useState, useEffect } from 'react'
 
 export const metadata = {
-  title: '...',
-};
+  title: {
+    default: 'Mihai S | Front-end',
+  },
+}
+
 
 export default function RootLayout({ children }) {
 

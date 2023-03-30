@@ -9,13 +9,6 @@ import NavigationDots from "./components/NavigationDots"
 import SocialMedia from "./components/SocialMedia"
 
 
-export const metadata = {
-   title: {
-     default: 'Mihai S | Front-end',
-   },
- }
-
-
 export default function Home() {
   
  
