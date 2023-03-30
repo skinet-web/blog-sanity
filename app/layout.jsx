@@ -1,22 +1,38 @@
-
+'use client'
 import './globals.css'
 import Link from 'next/link'
 import Navbar from './components/Navbar'
 import SocialMedia from './components/SocialMedia'
 import Head from 'next/head'
+import { useState, useEffect } from 'react'
 
 export default function RootLayout({ children }) {
+
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
+
  
   return (
     <html lang="en">
-      
-      <body>
+      {loading ? (
+      <body className="loader-container">
+        <div className="spinner"></div>
+      </body>
+       ) : (
+        <body>
         <Navbar /> 
         
         
         {children}
         
-      </body>
+        </body>  
+       )}
+     
     </html>
   )
 }

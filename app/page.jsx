@@ -1,3 +1,6 @@
+
+'use client'
+
 import About from "./components/About"
 import Header from "./components/Header"
 import Contact from "./components/Contact"
@@ -8,23 +11,25 @@ import NavigationDots from "./components/NavigationDots"
 import SocialMedia from "./components/SocialMedia"
 
 
+
 export const metadata = {
    title: 'Mihai S | Front-End',
  }
 
+ 
+
 export default function Home() {
   
-
+ 
    return (
-    <>
+    <>      
        <Header />     
        <SocialMedia />
        <About />
        <Skills />
        <Portofolio />
        <Blog />
-       <Contact />
-       {/* <NavigationDots active={id}/> */}
+       <Contact />         
     </>
   )
 }
