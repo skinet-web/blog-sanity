@@ -13,7 +13,7 @@ import { useState, useEffect } from 'react'
 export default function Home() {
    const [loading, setLoading] = useState(true);
       useEffect(() => {
-         setLoading(true);
+         
          setTimeout(() => {
             setLoading(false);
          }, 700);

@@ -16,7 +16,7 @@ const Navbar = ({}) => {
     pt-1 pb-2 items-center bg-[#F2F5FA]  z-50 '>
      
       <a  href='/'  className='flex justify-start items-center'>
-        <Image src={coding} height='auto' width='auto' alt='logo'className='w-[90px] h-[40px] object-contain ml-3' />
+        <Image src={coding} height='90px' width='40px'   alt='logo'className='w-[90px] h-[40px] object-contain ml-3' />
         
       </a>
       <ul className='sm:flex hidden flex-1 uppercase justify-center items-center'>
