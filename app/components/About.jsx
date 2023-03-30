@@ -28,14 +28,14 @@ const About = () => {
                     whileInView={{ opacity: 1 }}
                     whileHover={{scale: 1.1 }}
                     transition={{ duration: 0.5, type: 'tween'}}
-                    key={about.title + index}
+                    key={about.description + index}
                     className='flex  justify-start items-start w-full min-h-[350px] flex-col m-2 '>
                         <Image src={urlFor(about.imgUrl).url()} width='400' height='400' alt='about-picture' 
                         className='rounded-md object-cover w-full '/>
-                        <h2 alt='about-title' className='font-bold' >{about.title}</h2>    
-                        <p alt='about-p'className='text-sm mt-3  text-justify'>
+                        {/* <h2 alt='about-title' className='font-bold' >{about.title}</h2>     */}
+                        <div alt='about-p'className='text-sm mt-3  text-justify'>
                             <PortableText value={about.content} /> 
-                        </p>
+                        </div>
                         
                 </motion.div>
             ))}

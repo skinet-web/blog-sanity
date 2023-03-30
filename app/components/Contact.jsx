@@ -55,7 +55,7 @@ const Contact = () => {
             </div>
             <div className='flex  items-center  gap-3 min-w-[290px] min-h-[100px] 
             p-6 rounded-2xl bg-[#EDF2F8]'>
-                    <Image src={location} width='40px' height='40px'  alt='email-icon' 
+                    <Image src={location} width='40px' height='40px'  alt='email-location' 
                     className='max-w-[50px]  object-contain'/>
                     <p className=''>Bucharest</p>
                     

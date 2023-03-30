@@ -4,8 +4,8 @@ import { logo, tailwind, javascript, git, figma, dev } from 'public'
 import { motion } from 'framer-motion'
 import Image from 'next/image';
 import {AiFillLinkedin, AiFillGithub, AiFillRead} from 'react-icons/ai'
-import { AppWrap } from '../wrapper';
-
+import { AppWrap, } from '../wrapper';
+import Head from 'next/head';
 
 const scaleVariants = {
   whileInView:{
@@ -35,6 +35,7 @@ const Header = () => {
 
   return ( 
     <section className='w-[100%] sm:h-[64rem] lg:h-[56rem] xl:h-[67rem] bg-[#EDF2F8]'>
+      
       <div className='max-w-[107rem] mx-auto'>
         <div 
         id='home'        
@@ -73,7 +74,7 @@ const Header = () => {
              whileInView={scaleVariants.whileInView}
              transition={{duration: 1, ease: 'easeInOut'}}
           >
-            <Image src={dev} className='mt-20 lg:mt-0 w-[40rem] object-contain' />
+            <Image src={dev} alt='dev-image' className='mt-20 lg:mt-0 w-[40rem] object-contain' />
           </motion.div>
         </div>
       </div>

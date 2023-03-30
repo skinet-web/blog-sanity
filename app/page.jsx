@@ -6,15 +6,19 @@ import Skills from "./components/Skills"
 import Blog from "./components/Blog"
 import NavigationDots from "./components/NavigationDots"
 import SocialMedia from "./components/SocialMedia"
-
+import Head from 'next/head'
 
 
 export default function Home() {
   
 
    return (
-    <div className=' '>       
+    <body className=' '>
+     
        <Header />
+       <Head>
+        <title>My page title</title>
+      </Head>
        <SocialMedia />
        <About />
        <Skills />
@@ -22,6 +26,6 @@ export default function Home() {
        <Blog />
        <Contact />
        {/* <NavigationDots active={id}/> */}
-    </div>
+    </body>
   )
 }
