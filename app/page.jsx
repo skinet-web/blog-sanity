@@ -6,19 +6,18 @@ import Skills from "./components/Skills"
 import Blog from "./components/Blog"
 import NavigationDots from "./components/NavigationDots"
 import SocialMedia from "./components/SocialMedia"
-import Head from 'next/head'
 
+
+export const metadata = {
+   title: 'Mihai S | Front-End',
+ }
 
 export default function Home() {
   
 
    return (
-    <body className=' '>
-     
-       <Header />
-       <Head>
-        <title>My page title</title>
-      </Head>
+    <>
+       <Header />     
        <SocialMedia />
        <About />
        <Skills />
@@ -26,6 +25,6 @@ export default function Home() {
        <Blog />
        <Contact />
        {/* <NavigationDots active={id}/> */}
-    </body>
+    </>
   )
 }

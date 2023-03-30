@@ -7,7 +7,6 @@ import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import {motion} from 'framer-motion'
 
 
-
 const Navbar = ({}) => {
   
  const [toggle, setToggle] = useState(false)
@@ -15,6 +14,7 @@ const Navbar = ({}) => {
   return (
     <nav className='flex fixed w-full flex-row justify-between 
     pt-1 pb-2 items-center bg-[#F2F5FA]  z-50 '>
+     
       <a  href='/'  className='flex justify-start items-center'>
         <Image src={coding} alt='logo'className='w-[90px] h-[40px] object-contain ml-3' />
         
