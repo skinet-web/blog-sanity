@@ -12,10 +12,6 @@ import SocialMedia from "./components/SocialMedia"
 
 
 
-export const metadata = {
-   title: 'Mihai S | Front-End',
- }
-
  
 
 export default function Home() {
