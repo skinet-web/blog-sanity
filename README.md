@@ -9,7 +9,7 @@ Welcome to my full-stack portfolio website, built with Next.js 13, Tailwind CSS,
 - User-friendly interface for generating and updating content with Sanity CMS
 - Integration with a back-end system for managing data and content
 - Server-side rendering capabilities with Next.js
-- Blog posts about my work, design process, and tips and tricks for building websites and applications
+- Blog posts about my hobbies
 - Portfolio showcasing recent projects, with descriptions of the technologies used and problems solved
 - A focus on solving problems and creating experiences that people love
 - A passion for making projects both beautiful and functional
